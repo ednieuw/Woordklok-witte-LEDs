@@ -3,7 +3,7 @@
 Woordklok met witte LEDs<br>
 <img alt="Woordklok" src="woordklokCIMG2963.JPG" width="450" /><br>
 De diverse versies Arduino code voor de ATMEGA328-chip gemonteerd op een PCB board bestuurd de 24 LED-strips van de woordklok<br>
-Op de PCB kunne de volgende onderdelen worden aangesloten: <br>
+Op de PCB kunnen de volgende onderdelen worden aangesloten: <br>
 - RCT DS3231 ZS-042 clock module<br>
 - KY-040 Keyes Rotary Encoder<br>
 - LDR light sensor 5528<br>
