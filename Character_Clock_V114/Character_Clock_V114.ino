@@ -760,19 +760,14 @@ void DCF77Check(void)
    DCF_signal+=2;
    setTime(DCFtime);
    Inow = RTCklok.now(); 
-   int diff = 1000 + DCFtime - Inow.unixtime() ;           // time is a uint32_t. -1 gives 4294967295 the maximum value for a 32-bit unsigned integer     
-   diff -= 1000;
-   diff = abs(DCFtime - Inow.unixtime()); 
-   if(diff > 2)                                                  // If the time differs more than a second -> update
+   Tekstprint("DCF OK: ");
+   if(abs(DCFtime - Inow.unixtime()) > 2)                                                  // If the time differs more than a second -> update
       {
        RTCklok.adjust(DCFtime);
-       sprintf(sptext,"DCF OK: Time NOK updated with %d seconds",diff);  Tekstprintln(sptext);
+       Tekstprintln("Time NOK updated");
        Print_RTC_tijd();
       }
-   else 
-      {
-       sprintf(sptext,"DCF OK: Time OK, not updated");  Tekstprintln(sptext);
-      }
+   else Tekstprintln("Time OK");
   }
  bool LHbit = digitalRead(DCF_PIN);
  if (UseDCF)  digitalWrite(DCF_LED_Pin, 1 - LHbit );                 // Write inverted DCF pulse to LED on board 
