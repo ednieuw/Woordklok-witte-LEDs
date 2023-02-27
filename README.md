@@ -1,9 +1,11 @@
-# WordClock-WhiteLEDs
+# Word clock white LEDs
 
 Zelfbouw woordklok met witte LEDs.<br>
 <img alt="Woordklok" src="woordklokCIMG2963.JPG" width="450" /><br>
 De diverse versies Arduino code voor de ATMEGA328 of ATMEGA1284-chip gemonteerd op een PCB board bestuurd de 24 LED-strips van de woordklok<br>
 Meer info hier: https://ednieuw.home.xs4all.nl/Woordklok/index.html
+or as pdf: Bouwinstructies witlicht woordklok.pdf
+
 
 De volgende onderdelen worden aangesloten: <br>
 - RCT DS3231 ZS-042 clock module<br>
