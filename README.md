@@ -15,6 +15,9 @@ De volgende onderdelen kunnen worden aangesloten: <br>
 - FM Stereo Radio Module RDA5807M RRD-102V2.0 <br>
 - MAX7219_8DIGIT           // Only with 1284. Not enough pins on ATMEGA328<br>
 - DS1820                   // Only with 1284<br>
+NEW
+- ESP32 NTP clock. https://github.com/ednieuw/ESP32SerialNTP-BLE-Clock
+  
 
 De 74HC595 ULN2803APG combinatie besturen de LED-strips door bits in de 74HC595 te schuiven om de LEDs aan en uit te zetten<br>
 Een FT232RL FTDI USB to TTL Serial Module kan gebruikt worden om de ATMEGA te programmeren<br>
