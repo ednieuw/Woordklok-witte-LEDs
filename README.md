@@ -2,8 +2,8 @@
 
 Zelfbouw woordklok met witte LEDs.<br>
 <img alt="Woordklok" src="woordklokCIMG2963.JPG" width="450" /><br>
-De diverse versies Arduino code voor de ATMEGA328 of ATMEGA1284-chip gemonteerd op een PCB board bestuurd de 24 LED-strips van de woordklok.<br>
-Meer info hier: https://ednieuw.home.xs4all.nl/Woordklok/index.html
+
+Deze pagina bevat diverse versies Arduino code voor de ATMEGA328 of ATMEGA1284-chip gemonteerd op een PCB board. De code bestuurt de 24 LED-strips van de woordklok.<br>De originele bouwinstructies staan verderop deze pagina of op de oorspronkelijke pagina hier: https://ednieuw.home.xs4all.nl/Woordklok/index.html
 of the web pagina hier als pdf: https://github.com/ednieuw/Woordklok-witte-LEDs/blob/master/Bouwinstructies%20witlicht%20woordklok.pdf
 
 De volgende onderdelen kunnen worden aangesloten: <br>
@@ -29,7 +29,9 @@ Vanaf versie V112 zijn de functionaliteiten met #defines aan of uit te zetten.
 
 
 <h1 class="auto-style1">Instructie wit licht woordklok</h1>
+
 <img alt="" height="300" src="Bouwpakket_files/zw-klok-CIMG2963.JPG" >
+
 Deze woordklok bestaat uit een matrix van 11 bij 11 letters en wordt verlicht door witte LEDs. 
 De woordklok bestaat uit onderdelen zoals in de tabel hieronder is weergegeven. <br>
 De woordklokonderdelen zijn voor 23x23cm en 30x30cm woordplaten ontworpen. <br>
