@@ -36,9 +36,8 @@ De woordklokonderdelen zijn voor 23x23cm en 30x30cm woordplaten ontworpen. <br>
 
 Kasten kunnen van diverse soorten hardhout gemaakt worden of van MDF zodat ze in een gewenste kleur te verven zijn.<br>
 
-Dezelfde klok is ook met kleuren-LEDs te maken. <br> <a href="Woordklok-Kleur.htm">
-Deze kleurenklok gebruikt WS2812 RGB LEDs.<br>
-De klok van 25x25 of 50x50 cm met <a href="WoordklokSK6812.htm">12x12 letters en SK6812 RGBW is hier</a> te vinden.<br> 
+Dezelfde klok is ook met kleuren-LEDs te maken.https://github.com/ednieuw/Word-Colour-Clock-SK6812-WS2812
+
 Om de tijd via WIFI te ontvangen met deze klok is een instructie <a href="https://github.com/ednieuw/ESP32SerialNTP-BLE-Clock">hier te vinden</a>. <br>
 De Bluetooth module wordt dan vervangen door een ESP32-C3 of S3 die via WIFI de tijd ophaalt, een Bluetooth menu en een HTML-pagina voor de bediening van de klok aanmaakt.
 
