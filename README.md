@@ -3,7 +3,10 @@
 Zelfbouw woordklok met witte LEDs.<br>
 <img alt="Woordklok" src="woordklokCIMG2963.JPG" width="450" /><br>
 
-Deze pagina bevat diverse versies Arduino code voor de ATMEGA328 of ATMEGA1284-chip gemonteerd op een PCB board. De code bestuurt de 24 LED-strips van de woordklok.<br>De originele bouwinstructies staan verderop deze pagina of op de oorspronkelijke pagina hier: https://ednieuw.home.xs4all.nl/Woordklok/index.html
+### Deze klok heeft sinds 2024 modernere variaties: https://github.com/ednieuw/WordclockSelector
+
+Deze pagina bevat diverse versies Arduino code voor de ATMEGA328 of ATMEGA1284-chip gemonteerd op een PCB board. De code bestuurt de 24 LED-strips van de woordklok.<br>
+De originele bouwinstructies staan verderop deze pagina of op de oorspronkelijke pagina hier: https://ednieuw.home.xs4all.nl/Woordklok/index.html
 
 of hier als pdf: https://github.com/ednieuw/Woordklok-witte-LEDs/blob/master/Bouwinstructies%20witlicht%20woordklok.pdf
 
@@ -16,18 +19,15 @@ De volgende onderdelen kunnen worden aangesloten: <br>
 - FM Stereo Radio Module RDA5807M RRD-102V2.0 <br>
 - MAX7219_8DIGIT           // Only with 1284. Not enough pins on ATMEGA328<br>
 - DS1820                   // Only with 1284<br>
-NEW
+
 - ESP32 NTP clock. https://github.com/ednieuw/ESP32SerialNTP-BLE-Clock
   
-
 De 74HC595 ULN2803APG combinatie besturen de LED-strips door bits in de 74HC595 te schuiven om de LEDs aan en uit te zetten<br>
 Een FT232RL FTDI USB to TTL Serial Module kan gebruikt worden om de ATMEGA te programmeren<br>
 De HC05/HM-10/JDY-23 Bluetooth-modules wordt gebruikt om de klok te besturen en uit te lezen.<br>
 Een DCF77-module kan aangesloten worden om de tijd in te stellen via de lange golf<br>
 V1.0.0 is een gestripte versie van V112 met alleen functionaliteit voor een draaiknop, DS3231 klokmodule en LDR
 Vanaf versie V112 zijn de functionaliteiten met #defines aan of uit te zetten.
-
-
 
 <h1 class="auto-style1">Instructie wit licht woordklok</h1>
 
@@ -56,8 +56,6 @@ Twee woordplaten met font Mirien en Tahoma
  <h2>Benodigdheden</h2>
 <p>Soldeerbenodigdheden<br>
   Multimeter</p>
-<p class=auto-style1><a href="Woordklok%20Bestelling%20Berekenen%20leeg.xlsx">
-Excel-sheet van onderdelen</a> </p>
 <table width="730" height="1823" border=1 cellpadding=0 cellspacing=0 class="ms-prof-main">
     <!-- fpstyle: 36,011111100 -->
  <tr>
@@ -416,247 +414,126 @@ Excel-sheet van onderdelen</a> </p>
   </td>
   <td valign=top class="ms-prof-even">
   <p align=right>
-  <img border=0
-  width=96 height=65 src="Bouwpakket_files/image023.jpg" class="auto-style1"></p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1 align=right>€ 3,00</p>
-  </td>
+  <img border=0  width=96 height=65 src="Bouwpakket_files/image023.jpg" class="auto-style1"></p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1 align=right>€ 3,00</p>  </td>
     </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x lichtsensor </p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x lichtsensor </p>  </td>
   <td valign=top class="ms-prof-even">
   <p>
-  <img
-  border=0 width=94 height=40 src="Bouwpakket_files/image027.jpg" class="auto-style1"></p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class="auto-style1">€ 0,85</p>
-  </td>
+  <img border=0 width=94 height=40 src="Bouwpakket_files/image027.jpg" class="auto-style1"></p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class="auto-style1">€ 0,85</p>  </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x 22kΩ weerstand</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x 22kΩ weerstand</p>  </td>
   <td valign=top class="ms-prof-even">
-  <p>
-  <img
-  border=0 width=93 height=27 src="Bouwpakket_files/image028.jpg" class="auto-style1"></p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  € 0,15</td>
+  <p>  <img border=0 width=93 height=27 src="Bouwpakket_files/image028.jpg" class="auto-style1"></p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  € 0,15</td>
  </tr>
  <tr>
-   <td valign=top class="auto-style8">
-   <strong>Voeding en verlichting</strong></td>
-   <td valign=top class="ms-prof-even">&nbsp;
-   </td>
-   <td valign=top class="auto-style5" style="width: 98px">&nbsp;
-   </td>
+   <td valign=top class="auto-style8">   <strong>Voeding en verlichting</strong></td>
+   <td valign=top class="ms-prof-even">&nbsp;   </td>
+   <td valign=top class="auto-style5" style="width: 98px">&nbsp;   </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x Voeding 12V gelijkstroom, 1,25 Ampere </p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p class=auto-style1>&nbsp;</p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1>€ 10,00</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x Voeding 12V gelijkstroom, 1,25 Ampere </p>  </td>
+  <td valign=top class="ms-prof-even">  <p class=auto-style1>&nbsp;</p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1>€ 10,00</p>  </td>
  </tr>
  <tr>
-   <td valign=top class="ms-prof-left">
-     <p class=auto-style1>1 x Stroom Aansluitkabel Euro-stekker – Kabel, open 
-	 einde Zwart 1.50 m</p>
-   </td>
-   <td valign=top class="ms-prof-even">
-     <p class=auto-style1>&nbsp;</p>
-   </td>
-   <td valign=top class="auto-style5" style="width: 98px">
-     <p class=auto-style1>€ 5,00</p>
-   </td>
+   <td valign=top class="ms-prof-left"> <p class=auto-style1>1 x Stroom Aansluitkabel Euro-stekker – Kabel, open einde Zwart 1.50 m</p>   </td>
+   <td valign=top class="ms-prof-even"> <p class=auto-style1>&nbsp;</p>  </td>
+   <td valign=top class="auto-style5" style="width: 98px"> <p class=auto-style1>€ 5,00</p>   </td>
  </tr>
  <tr>
-   <td valign=top class="auto-style8">1 x Adapter 12V gelijkstroom, 1 Ampere (dan 
-   geen 220V in de klokkast)</td>
-   <td valign=top class="ms-prof-even">&nbsp;
-   </td>
+   <td valign=top class="auto-style8">1 x Adapter 12V gelijkstroom, 1 Ampere (dan geen 220V in de klokkast)</td>
+   <td valign=top class="ms-prof-even">&nbsp;   </td>
    <td align="right" valign=top class="auto-style7" style="width: 98px">€ 10,00</td>
  </tr>
     <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x 50 cm zwart-rood voedingskabel (0.14 mm2)</p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p class=auto-style1>&nbsp;</p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1>€ 0,20</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x 50 cm zwart-rood voedingskabel (0.14 mm2)</p>  </td>
+  <td valign=top class="ms-prof-even">  <p class=auto-style1>&nbsp;</p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1>€ 0,20</p>  </td>
     </tr>
  <tr>
-   <td valign=top class="ms-prof-left">
-   <table border="0" cellpadding="0" cellspacing="0" width="522">
-	   <colgroup>
-		   <col width="522">
-	   </colgroup>
-	   <tr height="20">
-		   <td height="20" width="522" class="auto-style1">
-		   1 x Female&nbsp; 5.5 x 2.1mm DC Power plug</td>
-	   </tr>
+<td valign=top class="ms-prof-left">
+<table border="0" cellpadding="0" cellspacing="0" width="522">
+<colgroup>   <col width="522">   </colgroup>
+ <tr height="20">		   <td height="20" width="522" class="auto-style1">		   1 x Female&nbsp; 5.5 x 2.1mm DC Power plug</td>
+   </tr>
    </table>
     </td>
-   <td valign=top class="ms-prof-even">&nbsp;
-   </td>
-   <td align="right" valign=top style="width: 98px">
-  <p class=auto-style8 align=right>€ 2,00</p>
-    </td>
+   <td valign=top class="ms-prof-even">&nbsp;   </td>
+   <td align="right" valign=top style="width: 98px">  <p class=auto-style8 align=right>€ 2,00</p>    </td>
  </tr>
     <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x Verlichtingsgrondplaat 3 x 300 x 300 mm MDF-plaat</p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p class=auto-style1 align=right>&nbsp;</p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1 align=right>€ 3,00</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x Verlichtingsgrondplaat 3 x 300 x 300 mm MDF-plaat</p>  </td>
+  <td valign=top class="ms-prof-even">  <p class=auto-style1 align=right>&nbsp;</p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1 align=right>€ 3,00</p>  </td>
     </tr>
 	<tr>
-  <td valign=top class="ms-prof-left">
-  <p><span lang=EN-GB class="auto-style1">3 x 9-pin Dupont female connector</span></p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p align=right>
-  <img border=0
-  width=93 height=58 src="Bouwpakket_files/image010.jpg" class="auto-style1"></p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1 align=right>€ 3,00</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p><span lang=EN-GB class="auto-style1">3 x 9-pin Dupont female connector</span></p>  </td>
+  <td valign=top class="ms-prof-even"> <p align=right>  <img border=0  width=93 height=58 src="Bouwpakket_files/image010.jpg" class="auto-style1"></p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1 align=right>€ 3,00</p>  </td>
     </tr>
  <tr>
   <td valign=top class="ms-prof-left">
   <p><span lang=EN-GB class="auto-style1">1 x 10 m wire wrapping 30 AWG = 0.05 
   mm2 rood</span></p>
   </td>
-  <td rowspan=3 valign=top class="ms-prof-even">
-  <p align=right><span lang=EN-GB class="auto-style1">&nbsp;</span></p>
-  <p>
-  <img
-  border=0 width=93 height=19 src="Bouwpakket_files/image029.jpg" class="auto-style1"></p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1>€ 2,00</p>
-  </td>
+  <td rowspan=3 valign=top class="ms-prof-even">  <p align=right><span lang=EN-GB class="auto-style1">&nbsp;</span></p>  
+ <p><img border=0 width=93 height=19 src="Bouwpakket_files/image029.jpg" class="auto-style1"></p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1>€ 2,00</p>  </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x 10 m wire wrapping 30 AWG = 0.05 mm2 zwart</p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1>€ 2,00</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x 10 m wire wrapping 30 AWG = 0.05 mm2 zwart</p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1>€ 2,00</p>  </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x 1 m wire wrapping 30 AWG = 0.05 mm2 geel</p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1>€ 0,20</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x 1 m wire wrapping 30 AWG = 0.05 mm2 geel</p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1>€ 0,20</p>  </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>1 x set krimpkous 100 cm x 1.5 mm diam + 10 cm x 5 mm 
-  diam</p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p>
-  <img
-  border=0 width=94 height=37 src="Bouwpakket_files/image030.jpg" class="auto-style1"></p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>1 x set krimpkous 100 cm x 1.5 mm diam + 10 cm x 5 mm diam</p>  </td>
+  <td valign=top class="ms-prof-even">  <p>  <img  border=0 width=94 height=37 src="Bouwpakket_files/image030.jpg" class="auto-style1"></p>  </td>
   <td valign=top class="auto-style5" style="width: 98px">
   <p class=auto-style1>€ 3,00</p>
   </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p><span lang=EN-GB class="auto-style1">1 x 2 meter Cool White SMD 2835/3528, 
-  120 LEDS/meter, LED-strip 12V</span></p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p>
-  <img
-  border=0 width=93 height=20 src="Bouwpakket_files/image031.jpg" class="auto-style1"></p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style1>€ 15,00</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p><span lang=EN-GB class="auto-style1">1 x 2 meter Cool White SMD 2835/3528,   120 LEDS/meter, LED-strip 12V</span></p>  </td>
+  <td valign=top class="ms-prof-even">  <p>  <img  border=0 width=93 height=20 src="Bouwpakket_files/image031.jpg" class="auto-style1"></p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">  <p class=auto-style1>€ 15,00</p>  </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1>&nbsp;</p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p class=auto-style1>&nbsp;</p>
-  </td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  <p class=auto-style5>&nbsp;</p>
-  </td>
- </tr>
-    <tr>
-    <td class="xl103">Gesoldeerde en geteste printplaat </td>
-    <td class="xl99" align="right">&nbsp;</td>
-    <td class="xl99" align="right">€60,00 </td>
-    </tr>
-	<tr>
-    <td class="xl103">Gesoldeerde en geteste verlichtingsplaat inclusief LEDs </td>
-    <td class="xl99" align="right">&nbsp;</td>
-    <td class="xl99" align="right">€110,00 </td>
-    </tr>
- <tr>
-  <td valign=top class="ms-prof-left">
-  &nbsp;</td>
-  <td valign=top class="ms-prof-even">
-  &nbsp;</td>
-  <td valign=top class="auto-style5" style="width: 98px">
-  &nbsp;</td>
- </tr>
- <tr>
-  <td valign=top class="ms-prof-left">
-  <p class=auto-style1><strong>Optioneel</strong></p>
-  </td>
-  <td valign=top class="ms-prof-even">
-  <p class=auto-style1>&nbsp;</p>
-  </td>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1>&nbsp;</p>  </td>
+  <td valign=top class="ms-prof-even">  <p class=auto-style1>&nbsp;</p>  </td>
   <td valign=top class="auto-style5" style="width: 98px">
   <p class=auto-style5>&nbsp;</p>
   </td>
  </tr>
  <tr>
-  <td valign=top class="ms-prof-left">
-  <p><span lang=EN-GB class="auto-style1">FT232RL 5.5V FTDI USB to TTL Serial 
-  Module + 0.1uF+10 k</span><span class="auto-style1">Ω</span></p>
+  <td valign=top class="ms-prof-left">  &nbsp;</td>
+  <td valign=top class="ms-prof-even">  &nbsp;</td>
+  <td valign=top class="auto-style5" style="width: 98px">  &nbsp;</td>
+ </tr>
+ <tr>
+  <td valign=top class="ms-prof-left">  <p class=auto-style1><strong>Optioneel</strong></p>  </td>
+  <td valign=top class="ms-prof-even">  <p class=auto-style1>&nbsp;</p>  </td>
+  <td valign=top class="auto-style5" style="width: 98px">
+  <p class=auto-style5>&nbsp;</p>
   </td>
-  <td valign=top class="ms-prof-even">
-  <p align=right><span
-  lang=EN-GB class="auto-style1">&nbsp;</span></p>
-  </td>
+ </tr>
+ <tr>
+  <td valign=top class="ms-prof-left">  <p><span lang=EN-GB class="auto-style1">FT232RL 5.5V FTDI USB to TTL Serial   Module + 0.1uF+10 k</span><span class="auto-style1">Ω</span></p>  </td>
+  <td valign=top class="ms-prof-even">  <p align=right><span  lang=EN-GB class="auto-style1">&nbsp;</span></p>  </td>
   <td valign=top class="auto-style5" style="width: 98px">
   € 15,00</td>
  </tr>
  <tr>
-   <td valign=top class="ms-prof-left"><span lang=EN-GB class="auto-style1">
-   Wireless Serial 6 Pin Bluetooth RF Transceiver Module HC05 (Android, W10)</span></td>
-   <td valign=top class="ms-prof-even">&nbsp;
-   </td>
-   <td valign=top class="auto-style5" style="width: 98px"><div align="right" class="auto-style1">
-	   € 10,00</div></td>
+   <td valign=top class="ms-prof-left"><span lang=EN-GB class="auto-style1">   Wireless Serial 6 Pin Bluetooth RF Transceiver Module HC05 (Android, W10)</span></td>
+   <td valign=top class="ms-prof-even">&nbsp;   </td>
+   <td valign=top class="auto-style5" style="width: 98px"><div align="right" class="auto-style1">   € 10,00</div></td>
  </tr>
  <tr>
    <td valign=top class="ms-prof-left"><span lang=EN-GB class="auto-style1">
